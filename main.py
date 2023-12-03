@@ -1,7 +1,6 @@
 import pandas as pd
 from fpdf import FPDF
 
-
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.set_auto_page_break(auto=False, margin=0)
 
@@ -28,9 +27,6 @@ for index, row in df.iterrows():
 
     for i in range(row["Pages"] - 1):
         pdf.add_page()
-
-        # Draw horizontal lines
-
 
         # Set the footer
         pdf.ln(277)
